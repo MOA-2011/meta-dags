@@ -4,14 +4,14 @@ MAINTAINER = "4d team"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d3b0f3ed78ab42bd104edcc5f55bef35"
 
-inherit gitpkgv deploy
+inherit gitpkgv pythonnative pkgconfig deploy
 
 SRCREV = "${AUTOREV}"
-PV = "2.1+gitr${SRCPV}"
-PKGV = "2.1+gitr${GITPKGV}"
+#PV = "r1"
+#PKGV = "git${GITPKGV}"
 PR = "r1"
 
-SRC_URI="git://github.com/MOA-2011/enigma2-3rdparty-plugins.git;protocol=git"
+SRC_URI = "git://github.com/MOA-2011/enigma2-3rdparty-plugins.git"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
@@ -26,10 +26,11 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 S = "${WORKDIR}/git"
 
 THIRDPARTY_PLUGINS = " \
-    enigma2-plugin-extensions-backupsuite_16.8_mips32el.ipk \
     enigma2-plugin-extensions-epanel_5.5-r1_mips32el.ipk \
     enigma2-plugin-extensions-permanenttimeshift_1.0+git20+529c5d8-r0_mips32el.ipk \
     "
+
+#    enigma2-plugin-extensions-backupsuite_16.8_mips32el.ipk
 
 do_install() {
 }
@@ -54,8 +55,8 @@ do_deploy() {
 
     for i in ${THIRDPARTY_PLUGINS}; do
         if [ -f $i ]; then
-#            install -m 0644 $i ${DEPLOY_DIR_IPK}/mips32el;
             install -m 0644 $i ${WORKDIR}/deploy-ipk/mips32el;
+            install -m 0644 $i ${DEPLOY_DIR_IPK}/mips32el;
         fi
     done;
 

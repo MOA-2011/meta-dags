@@ -6,8 +6,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=8e37f34d0e40d32ea2bc90ee812c9131"
 inherit gitpkgv pythonnative pkgconfig
 
 SRCREV = "${AUTOREV}"
-PV = "experimental-git${SRCPV}"
+PV = "experimental"
 PKGV = "experimental-git${GITPKGV}"
+PR = "r1"
 
 SRC_URI="git://github.com/MOA-2011/3rdparty-system-plugins.git;protocol=git"
 

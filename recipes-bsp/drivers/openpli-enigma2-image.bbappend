@@ -3,6 +3,7 @@ BRAND_TYPE?="worldvision"
 RDEPENDS += " \
             3rdparty-system-plugins \
             enigma2-3rdparty-plugins \
+            extra-plugins \
             dags-shutdown \
 			splash-bootlogo \
             \
