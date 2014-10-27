@@ -7,6 +7,8 @@ RDEPENDS += " \
             dags-shutdown \
 			splash-bootlogo \
             \
+            enigma2-plugin-extensions-backupsuite \
+            \
             libav \
             ntp \
             x264 \
