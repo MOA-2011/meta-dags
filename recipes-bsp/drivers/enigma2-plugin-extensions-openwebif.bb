@@ -49,11 +49,12 @@ SRC_URI = "git://github.com/MOA-2011/enigma2-plugin-extensions-openwebif.git;pro
         file://te_force1plus.jpg \
         file://wo_force1.jpg \
         file://wo_force1plus.jpg \
+        file://wo_force2.jpg \
         file://ru.po \
         file://iqonmicro.jpg \
         file://iqonmicro.html \
         file://iqonmicro.png \
-        file://iq_force2solid.jpg \
+        file://iq_force2.jpg \
            "
 
 S="${WORKDIR}/git"
